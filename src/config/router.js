@@ -7,6 +7,7 @@ import Explore from '../screens/Explore';
 import Following from '../screens/Following';
 import Me from '../screens/Me';
 import Splash from '../screens/Splash';
+import Landing from '../screens/Landing';
 
 export const DashboardStack = createStackNavigator({
   Dashboard: {
@@ -81,6 +82,9 @@ export const Root = createStackNavigator({
   },
   Splash: {
     screen: Splash
+  },
+  Landing: {
+    screen: Landing
   }
 }, {
   mode: 'modal',
