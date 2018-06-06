@@ -63,7 +63,7 @@ export const Tabs = createBottomTabNavigator({
     screen: FollowingStack,
     navigationOptions: {
       tabBarLabel: 'Following',
-      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="bookmark" size={35} color={tintColor} />,
     },
   },
   Me: {
