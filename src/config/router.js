@@ -2,15 +2,15 @@ import React from 'react';
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import Dashboard from '../screens/Dashboard';
+import Home from '../screens/Home';
 import Explore from '../screens/Explore';
 import Bookmark from '../screens/Bookmark';
 
-export const DashboardStack = createStackNavigator({
-  Dashboard: {
-    screen: Dashboard,
+export const HomeStack = createStackNavigator({
+  Home: {
+    screen: Home,
     navigationOptions: {
-      title: 'Dashboard',
+      title: 'Home',
     },
   }
 });
@@ -34,10 +34,10 @@ export const BookmarkStack = createStackNavigator({
 });
 
 export const Tabs = createBottomTabNavigator({
-  Dashboard: {
-    screen: DashboardStack,
+  Home: {
+    screen: HomeStack,
     navigationOptions: {
-      tabBarLabel: 'Dashboard',
+      tabBarLabel: 'Home',
       tabBarIcon: ({ tintColor }) => <Icon name="home" size={35} color={tintColor} />,
     },
   },
