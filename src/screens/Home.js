@@ -20,19 +20,17 @@ class Home extends Component {
     const uri = newsApi.headline_url + '?apiKey=' + newsApi.api_key + '&country=id';
     const response = await fetch(uri);
     const headlines = await response.json();
-    this.setState({ headlines: headlines.results.articles});
+    this.setState({ headlines: headlines.articles});
   }
   render() {
-    const { headlines } = this.state;
-    console.log('haedline', headlines)
     return (
       <ScrollView>
         <Text h2 style={styles.h2}>News Headline</Text>
         <Card title="News Headlines">
         {
-          headlines.map((news, idx) => {
+          this.state.headlines.map((news, idx) => {
             return (
-              <View key={i}>
+              <View key={idx}>
                 <Image
                   resizeMode="cover"
                   source={{ uri: news.urlToImage }}
