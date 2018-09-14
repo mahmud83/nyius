@@ -5,7 +5,6 @@ import { Icon } from 'react-native-elements';
 import Dashboard from '../screens/Dashboard';
 import Explore from '../screens/Explore';
 import Bookmark from '../screens/Bookmark';
-import Splash from '../screens/Splash';
 
 export const DashboardStack = createStackNavigator({
   Dashboard: {
@@ -62,9 +61,6 @@ export const Root = createStackNavigator({
   Tabs: {
     screen: Tabs,
   },
-  Splash: {
-    screen: Splash
-  }
 }, {
   mode: 'screen',
   headerMode: 'none',
